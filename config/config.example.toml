@@ -1,10 +1,24 @@
 # Global LLM configuration
+# OpenManus Configuration - Local Ollama Setup
+
 [llm]
-model = "claude-3-7-sonnet-20250219"       # The LLM model to use
-base_url = "https://api.anthropic.com/v1/" # API endpoint URL
-api_key = "YOUR_API_KEY"                   # Your API key
-max_tokens = 8192                          # Maximum number of tokens in the response
-temperature = 0.0                          # Controls randomness
+model = "qwen2.5:7b"
+base_url = "http://localhost:11434/v1"
+api_key = "ollama"
+max_tokens = 8096
+temperature = 0.0
+
+[browser]
+headless = false
+
+[search]
+engine = "duckduckgo"
+
+[sandbox]
+use_sandbox = false
+
+[daytona]
+daytona_api_key = ""
 
 # [llm] # Amazon Bedrock
 # api_type = "aws"                                       # Required
